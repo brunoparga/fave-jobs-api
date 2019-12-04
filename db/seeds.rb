@@ -1,8 +1,14 @@
 # frozen_string_literal: true
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Cleaning up database...'
+Job.destroy_all
+
+json = JSON.parse(File.read('db/seeds.json'))
+puts 'Creating new jobs...'
+json['jobs'].each do |job|
+  # I am painfully aware of how dumb it is to parse this JSON then unparse it
+  # This won't need to happen with the actual API, hopefully
+  Job.create(data: job.to_json, favorite: false)
+end
+
+puts 'Finished!'

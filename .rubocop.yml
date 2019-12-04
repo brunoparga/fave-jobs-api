@@ -4,18 +4,15 @@ require:
   - rubocop-performance
   - rubocop-rails
 
-# Exclusions below refer to Rails-generated files
 AllCops:
   Exclude:
     - 'bin/*'
+    - 'db/schema.rb'
 
 Metrics/LineLength:
   Max: 80
   IgnoredPatterns: ['\A\s*#']
-  Exclude:
-    - 'db/schema.rb'
 
-Metrics/BlockLength:
+Rails/Output:
   Exclude:
-    - 'db/schema.rb'
-
+    - 'db/seeds.rb'
