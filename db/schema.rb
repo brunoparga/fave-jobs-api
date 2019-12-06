@@ -10,16 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_204208) do
+ActiveRecord::Schema.define(version: 2019_12_06_173824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "jobs", force: :cascade do |t|
-    t.jsonb "data"
-    t.boolean "favorite"
+    t.boolean "favorite", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "api_id"
+    t.string "title"
+    t.string "salary"
+    t.string "description"
+    t.string "functions"
+    t.string "benefits"
+    t.string "city"
+    t.string "country"
+    t.string "country_flag_url"
+    t.string "seniority"
+    t.string "logo_url"
+    t.string "url"
+    t.string "modality"
+    t.string "published_at"
+    t.boolean "recommended", default: false
+    t.boolean "pinned", default: false
+    t.boolean "is_hot", default: false
+    t.boolean "remote", default: false
+    t.boolean "new", default: true
+    t.jsonb "company"
   end
 
 end
