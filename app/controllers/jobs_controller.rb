@@ -5,6 +5,7 @@ class JobsController < ApplicationController
   def index
     render json: Job.select(:api_id, :city, :company, :country, :favorite, :id,
                             :logo_url, :remote, :salary, :title)
+                    .where(favorite: true)
   end
 
   def show
