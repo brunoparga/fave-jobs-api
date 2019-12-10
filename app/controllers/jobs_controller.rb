@@ -7,11 +7,21 @@ class JobsController < ApplicationController
   end
 
   def create
-    p params
     render json: Job.create(job_params)
   end
 
   def destroy
     render json: Job.find_by(api_id: params[:api_id]).destroy
+  end
+
+  private
+
+  def job_params
+    params
+      .require(:job)
+      .permit(:api_id, :benefits, :city, :country, :country_flag_url,
+              :description, :functions, :is_hot, :logo_url, :modality, :new,
+              :pinned, :published_at, :recommended, :remote, :salary,
+              :seniority, :title, :url, company: %i[name about url])
   end
 end
