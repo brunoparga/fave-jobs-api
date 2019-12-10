@@ -18,8 +18,14 @@ The original structure envisioned for the 'jobs' database table had only two fie
 
 ## TODOs
 
-The API will have to deal with search requests from the front-end; use of the `pg_search` gem is envisaged. Regardless of the search term, all of the favorite jobs will still have to be served.
+The API won't need the ability to locate a job by its API id, that will go.
 
-Toggling favorite status.
+Perhaps, with the `friendly_id` gem, the `id` and `api_id` columns of the Jobs table can be merged.
 
-Tests.
+The `favorite` column has to go, since the DB will store *only* favorite jobs.
+
+Tests are required.
+
+Clean up the seed.
+
+Document how to get the app set up.
