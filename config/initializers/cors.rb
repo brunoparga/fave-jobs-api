@@ -10,6 +10,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins %r{\Ahttp://localhost:300\d\z} # Allow more than one port
-    resource '*', headers: :any, methods: %i[get post options]
+    resource '*', headers: :any, methods: %i[get post delete options]
   end
 end
