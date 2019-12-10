@@ -3,9 +3,7 @@
 # Controller for the user's favorite jobs
 class JobsController < ApplicationController
   def index
-    render json: Job.select(:api_id, :city, :company, :country, :favorite, :id,
-                            :logo_url, :remote, :salary, :title)
-                    .where(favorite: true)
+    render json: Job.all
   end
 
   def show
