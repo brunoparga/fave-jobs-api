@@ -22,8 +22,6 @@ Since the app no longer needs to retrieve jobs by external API id, storing JSON 
 
 Perhaps, with the `friendly_id` gem, the `id` and `api_id` columns of the Jobs table can be merged.
 
-The `favorite` column has to go, since the DB will store *only* favorite jobs.
-
 Tests are required.
 
 Clean up the seed.
