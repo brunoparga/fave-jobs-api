@@ -20,8 +20,6 @@ Since the app no longer needs to retrieve jobs by external API id, storing JSON 
 
 ## TODOs
 
-Perhaps, with the `friendly_id` gem, the `id` and `api_id` columns of the Jobs table can be merged.
-
 Tests are required.
 
 Document how to get the app set up.
