@@ -12,7 +12,7 @@ The app uses Ruby 2.6.5 with Rails 6.0.1 and a PostgreSQL database. Tests are in
 
 ## Progress report
 
-The API currently works with a seed, based on the sample query provided in the challenge.
+The API started with a seed, based on the sample query provided in the challenge; that has been weeded out to only one job, as a proof of concept.
 
 The original structure envisioned for the 'jobs' database table had only two fields, a `favorite` boolean and a `data` JSON field containing everything received from the external API. However, accessing this field proved difficult, so now the structure is a lot flatter, with only the nested `company` data being stored as JSON.
 
@@ -23,7 +23,5 @@ Since the app no longer needs to retrieve jobs by external API id, storing JSON 
 Perhaps, with the `friendly_id` gem, the `id` and `api_id` columns of the Jobs table can be merged.
 
 Tests are required.
-
-Clean up the seed.
 
 Document how to get the app set up.
