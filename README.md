@@ -68,16 +68,12 @@ Here's the command that generated this directory:
 
 The app uses Ruby 2.6.5 with Rails 6.0.1 and a PostgreSQL database. Tests are initially disabled to make it easier to add RSpec later.
 
+No gems that are too unusual were added to the app. `pry-byebug` mixes the default `byebug` debugging gem with `pry`, the alternative REPL to `irb`. The `rack-cors` middleware was activated to allow Cross-Origin Resource Sharing between the back and the front-end.
+
 ## Progress report
 
 The API started with a seed, based on the sample query provided in the challenge; that has been weeded out to only one job, as a proof of concept.
 
 The original structure envisioned for the 'jobs' database table had only two fields, a `favorite` boolean and a `data` JSON field containing everything received from the external API. However, accessing this field proved difficult, so now the structure is a lot flatter, with only the nested `company` data being stored as JSON.
 
-Since the app no longer needs to retrieve jobs by external API id, storing JSON in the DB is looking more attractive again...
-
-## TODOs
-
-Tests are required.
-
-Document how to get the app set up.
+This documentation is now complete, as is the app's functionality; all that is left in the project is implement the tests. If I was starting this project anew, with what I learned from it, I would probably stick to my original idea of storing the data from the API as a JSONB field. There is basically no manipulation of the incoming data, it is just stored as-is in the database and retrieved equally as-is.
