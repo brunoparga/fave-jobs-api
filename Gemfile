@@ -14,7 +14,11 @@ gem 'rack-cors'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-byebug'
+  gem 'rspec-rails'
 end
 
 group :development do
