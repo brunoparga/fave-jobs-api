@@ -8,6 +8,7 @@ AllCops:
   Exclude:
     - 'bin/*'
     - 'db/schema.rb'
+    - 'spec/factories.rb'
 
 Metrics/LineLength:
   Max: 80
