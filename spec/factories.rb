@@ -1,4 +1,3 @@
-# rubocop:disable
 FactoryBot.define do
   api_ids = ['front-end developer', 'back-end developer', 'full-stack developer']
   languages = ['C++', 'JavaScript', 'Malbolge', 'Python', 'Ruby']

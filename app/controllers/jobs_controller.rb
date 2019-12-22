@@ -7,10 +7,11 @@ class JobsController < ApplicationController
   end
 
   def create
-    render json: Job.create(job_params)
+    render json: Job.create(job_params), status: :created
   end
 
   def destroy
+    # head :no_content, [... header with api_id ...]
     render json: Job.find_by(api_id: params[:api_id]).destroy
   end
 
