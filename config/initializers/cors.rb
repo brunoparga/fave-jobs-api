@@ -10,6 +10,9 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins %r{\A(http://localhost:300\d|https://brunoparga.github.io)\z}
-    resource '*', headers: :any, methods: %i[get post delete options]
+    resource '*',
+             headers: :any,
+             methods: %i[get post delete options],
+             expose: ['Api-Id']
   end
 end
