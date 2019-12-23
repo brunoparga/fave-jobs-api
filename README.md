@@ -16,6 +16,7 @@ First of all, clone this repository into your machine:
 
 ```
 git clone https://github.com/brunoparga/fave-jobs-api.git
+cd fave-jobs-api
 ```
 
 Install the gems the app depends on, set up the database ([you need to have PostgreSQL installed](https://www.postgresql.org/download/)) and fire up the server:
