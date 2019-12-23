@@ -1,5 +1,5 @@
 FactoryBot.define do
-  api_ids = ['front-end developer', 'back-end developer', 'full-stack developer']
+  api_ids = %w[front-end_developer back-end_developer full-stack_developer]
   languages = ['C++', 'JavaScript', 'Malbolge', 'Python', 'Ruby']
   modalities = ['Full time', 'Part time', 'Freelance', 'Internship']
   seniorities = ['Junior', 'Semi Senior', 'Senior', 'Expert']
@@ -16,9 +16,9 @@ FactoryBot.define do
     modality { modalities.sample }
     published_at { Faker::Date.backward(days: 90) }
     remote { rand < 0.2 }
-    salary { '2000 - 3000'}
+    salary { '2000 - 3000' }
     seniority { seniorities.sample }
-    title { "#{seniorities.sample} #{languages.sample} #{api_ids.sample}" }
+    title { "#{seniority} #{languages.sample} #{api_id.sub('_', ' ')}" }
     url { '/empleos/programacion/rails-and-react-full-stack-developer-get-on-board-remoto' }
     company do
       { name: Faker::Company.name,

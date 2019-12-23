@@ -70,6 +70,8 @@ The app uses Ruby 2.6.5 with Rails 6.0.1 and a PostgreSQL database. Tests are in
 
 No gems that are too unusual were added to the app. `pry-byebug` mixes the default `byebug` debugging gem with `pry`, the alternative REPL to `irb`. The `rack-cors` middleware was activated to allow Cross-Origin Resource Sharing between the back and the front-end.
 
+No error handling was included; all requests are assumed to be well-formatted and to correspond to valid database operations to be performed.
+
 ## Progress report
 
 The API started with a seed, based on the sample query provided in the challenge; that has been weeded out to only one job, as a proof of concept.

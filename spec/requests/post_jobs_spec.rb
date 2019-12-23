@@ -36,7 +36,7 @@ describe 'POST /jobs route', type: :request do
     expect(response_job).to eq(request_job)
   end
 
-  it 'returns a created status' do
+  it 'sends a 201 Created status' do
     expect(response).to have_http_status(:created)
   end
 end

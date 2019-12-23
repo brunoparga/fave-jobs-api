@@ -11,8 +11,8 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    # head :no_content, [... header with api_id ...]
-    render json: Job.find_by(api_id: params[:api_id]).destroy
+    Job.find_by(api_id: params[:api_id]).destroy
+    head :no_content, api_id: params[:api_id]
   end
 
   private
